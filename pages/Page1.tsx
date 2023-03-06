@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Text, Image, TouchableOpacity, Alert} from 'react-native'
-import logo from "../assets/logo.jpg"
-import { IPage } from '../App'
-
+import { View, StyleSheet, Text, Image, TouchableOpacity, Alert } from 'react-native'
+import logo from "../assets/logo.png"
 import Toggle from '../components/Toggle'
+import {IPage} from '../App'
 
-export default function Page1( {setPageI} : IPage) {
+export default function Page1({ setPageI}: IPage) {
   const [flexDirection, setFlexDirection] = useState('row')
   const [justifyContent, setJustifyContent] = useState('center')
   const [alignItems, setAlignItems] = useState('center')
@@ -40,18 +39,17 @@ export default function Page1( {setPageI} : IPage) {
           setAlignItems(option)
         }}
       />
-      <Text> Olá </Text>
+      <Text> Olá</Text>
       <TouchableOpacity onPress={() => {
-        Alert.alert('Clicou!!')
+        Alert.alert('Clicou!!!')
       }}>
-        <Image source={logo} style= {styles.img}/>
+        <Image source={logo} style={styles.img} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => {
         setPageI(2)
       }}>
         <Text> Página 2</Text>
       </TouchableOpacity>
-      
       <View style={[styles.layout, layoutStyle]}>
         <View style={styles.box} />
         <View style={styles.box} />
@@ -81,7 +79,7 @@ const styles = StyleSheet.create({
   },
   box: {
     padding: 25,
-    backgroundColor: '#3bbdd4',
+    backgroundColor: '#0026ff',
     margin: 5,
   },
 })

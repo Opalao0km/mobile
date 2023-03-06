@@ -4,10 +4,9 @@ import { View, Text, Button, StyleSheet } from 'react-native'
 interface IToggle{
   label: string
   options: Array<string> | string[]
-  value: string 
-  onChange: (option: string) => void
+  value: string
+  onChange: (option: string) => void 
 }
-
 export default function Toggle({ label, options, value, onChange }: IToggle) {
   return (
     <View style={styles.container}>
@@ -15,7 +14,7 @@ export default function Toggle({ label, options, value, onChange }: IToggle) {
       <View style={styles.optionsContainer}>
         {options.map((option) => (
           <Button
-            color={option === value ? '#3B6CD4' : '#AAA'}
+            color={option === value ? '#0e12ff' : '#AAA'}
             onPress={() => onChange(option)}
             title={option}
             key={option}
